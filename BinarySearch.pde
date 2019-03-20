@@ -1,3 +1,4 @@
+   
 
 public class Item
 {
@@ -45,7 +46,7 @@ public int recursiveLinearSearch(int catNumToFind, int startIndex)
   if(startIndex >= store.length)
   return -1;
   else if(store[startIndex].getCatNum() == catNumToFind)
-  return startIndex;//store[startIndex].getCatNum();
+  return store[startIndex].getInventory();
   else
   return recursiveLinearSearch(catNumToFind, startIndex+1);
 }
@@ -57,7 +58,7 @@ public int binarySearch(int catNumToFind)
   while(high >= low) {
   int guess = (low+high)/2;
   if(store[guess].getCatNum() == catNumToFind) {
-  return guess; }//store[guess].getInventory();
+  return store[guess].getInventory(); }
   else if(store[guess].getCatNum() < catNumToFind) {
   low = guess +1; }
   else {
